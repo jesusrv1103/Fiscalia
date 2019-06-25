@@ -38,9 +38,10 @@
                     <td>{{$recursoDigital->categoria->nombre}}</td>
                     <td>{{$recursoDigital->descripcion}}</td>
                     <td>
-                     <a target="_blank" class="btn btn-xs btn-show"
-                     href="/storage/{{$recursoDigital->archivo}}"
-                   ><i class="fa fa-eye"></i></a>
+
+
+                     <a href="{{ asset('download/'. $recursoDigital->archivo) }}">Descargar pdf</a>
+
 
                         @can('pdf_edit')
                         <a href="{{ route('admin.recursos_digitales.edit',$recursoDigital->id)}}"
