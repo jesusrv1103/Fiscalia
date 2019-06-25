@@ -40,6 +40,7 @@
                     <td>
 
 
+
                      <a href="{{ asset('download/'. $recursoDigital->archivo) }}">Descargar pdf</a>
 
 

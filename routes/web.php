@@ -45,5 +45,5 @@ Route::group(
 Route::get('download/public/{filename}', function($filename)
 {
     $file = storage_path('app') . '/public/' . $filename; // or wherever you have stored your PDF files
-    return response()->download($file);
+    return response()->file($file);
 });
